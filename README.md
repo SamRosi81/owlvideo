@@ -73,14 +73,21 @@ Create a Twilio Function to generate client capability tokens.
    - Copy and paste [tokenvideo.js](tokenvideo.js) into the Code box.
 3. Click Save.
 
-### Create a Twilio Voice API Key and Secret
+### <a name="bullet3"></a>Create API Key and secret key string.
 
-(I need to write the instructions for this)
+    [https://www.twilio.com/console/voice/runtime/api-keys](https://www.twilio.com/console/voice/runtime/api-keys)
+    https://www.twilio.com/console/voice/runtime/api-keys/create
+    Friendly name: owlvideo
+    API key SID: SKe0b13kwe94wir04ofoq5d4bd9f8b2c
+    API key Secret: SuwkWen6Q5zNFvAkwlk49wMsXpDKOQ1bo
+
+Add the API key SID and Secret into the Generate Access Token Function.
+Note, the  account SID, API key and secret are the authentication keys. They must be from the same account or subaccount (not a combination of each).
 
 This will be used when configuring Twilio Functions environment variables:
 
-    VOICE_API_KEY
-    VOICE_API_SECRET
+    VOICE_API_KEY: SKe0b13kwe94wir04ofoq5d4bd9f8b2c
+    VOICE_API_SECRET: SuwkWen6Q5zNFvAkwlk49wMsXpDKOQ1bo
 
 ### Twilio Function Configuration
 
@@ -94,16 +101,16 @@ Check: Enable ACCOUNT_SID and AUTH_TOKEN.
 Create Function Environment Variables.
 
     (Key : value)
-    CLIENT_ID : Example, owluser (Your default Client identity attribute)
-    ROOM_ID : Example, owlroom
+    CLIENT_ID : Example, owluser (a default Client identity attribute)
+    ROOM_ID : Example, owlroom (a default room name attribute)
     
-    VOICE_API_KEY : SK value created above
-    VOICE_API_SECRET : secret string value created above
+    VOICE_API_KEY : SKe0b13kwe94wir04ofoq5d4bd9f8b2c (SK value created above)
+    VOICE_API_SECRET : SuwkWen6Q5zNFvAkwlk49wMsXpDKOQ1bo (secret string value created above)
     
     Click Save, to save the environment variables.
 
 Update your Twilio Function host name into the Twilio Client server side programs.
-You can view the host name by going to the following link. The host name, is Your Runtime Domain name.
+You can view the host name by going to the following link. The host name, is Your Runtime Domain name:
 
     https://www.twilio.com/console/runtime/overview
 
@@ -125,6 +132,16 @@ If on a website, use a browser to access the website Twilio Client URL, example:
 
     http://example.com/cgi/twVideo.html
     
-(I need to write up test steps)
+Click the Refresh button. The Client's room access token is refreshed.
+
+Enter your first name where it says, "Enter client id." Click the Refresh button and the token is refreshed with your name.
+
+Enter a room name where it says, "Enter room name." Click the Refresh button and the token is refreshed with your name and your room name.
+
+Click Preview My Camera. Video starts up.
+
+Click Join Room. You will join your room, using your name. Join Room, uses the refreshed token.
+
+Ask someone else to join.
 
 Cheers...
