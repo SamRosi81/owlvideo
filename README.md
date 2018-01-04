@@ -24,8 +24,6 @@ Twilio NodeJS Functions
 
 ## Implementation
 
-(to write up)
-
 The server side can run locally on a computer using NodeJS, or run on a website that runs PHP programs.
 
 ### Local Server Side Setup using a NodeJS Webserver
@@ -54,8 +52,6 @@ Run the NodeJS HTTP server.
 Use a browser to access the Twilio Client:
 
     http://localhost:8000/twVideo.html
-    
-Next, a Twilio Function.
 
 ### Remote Server Side Setup using a PHP Webserver
 
@@ -63,7 +59,7 @@ Download the project zip file. Unzip the file into your website's CGI bin direct
 
     https://example.com/cgi/twVideo.html
 
-### Add Twilio Functions
+### Add a Twilio Function
 
 Create a Twilio Function to generate client capability tokens.
 
@@ -76,6 +72,15 @@ Create a Twilio Function to generate client capability tokens.
    - Uncheck Configuration, Access Control to allow Twilio JS Client access.
    - Copy and paste [tokenvideo.js](tokenvideo.js) into the Code box.
 3. Click Save.
+
+### Create a Twilio Voice API Key and Secret
+
+(I need to write the instructions for this)
+
+This will be used when configuring Twilio Functions environment variables:
+
+    VOICE_API_KEY
+    VOICE_API_SECRET
 
 ### Twilio Function Configuration
 
@@ -90,11 +95,10 @@ Create Function Environment Variables.
 
     (Key : value)
     CLIENT_ID : Example, owluser (Your default Client identity attribute)
-    CLIENT_PHONE_NUMBER : Example, +12223331234 (Your Twilio phone number)
+    ROOM_ID : Example, owlroom
     
-    VOICE_TWIML_APP_SID_CALL_CLIENT : Example: APeb4627655a2a4be5ae1ba962fc9576cf
-    (API key code to a Twilio Function URL)
-    This is used in the token. This links the token Function to the TwiML provider Function.
+    VOICE_API_KEY : SK value created above
+    VOICE_API_SECRET : secret string value created above
     
     Click Save, to save the environment variables.
 
