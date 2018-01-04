@@ -28,7 +28,20 @@ Twilio NodeJS Functions
 
 The server side can run locally on a computer using NodeJS, or run on a website that runs PHP programs.
 
-### Local Server Side Setup using a NodeJS Webserver
+1. [Local Server Side Setup using a NodeJS Webserver](#bullet1)
+2. [Remote Server Side Setup using a PHP Webserver](#bullet2)
+3. [Add a Twilio Function](#bullet3)
+4. [Create API Key and secret key string](#bullet4)
+5. [Twilio Function Configuration](#bullet5)
+6. [Testing](#bullet6)
+
+Valid access tokens can now be generated for use to make phone calls.
+
+6. [Test using Owl Call.](#bullet6)
+
+7. [Set up to receive incoming phone calls.](#bullet7)
+
+### <a name="bullet1"></a>Local Server Side Setup using a NodeJS Webserver
 
 Download the project zip file.
 
@@ -55,13 +68,13 @@ Use a browser to access the Twilio Client:
 
     http://localhost:8000/twVideo.html
 
-### Remote Server Side Setup using a PHP Webserver
+### <a name="bullet2"></a>Remote Server Side Setup using a PHP Webserver
 
 Download the project zip file. Unzip the file into your website's CGI bin directory, or in any directory that will automatically run clientTokenGet.php as PHP program when called from HTTP. Test by displaying the Client in your browser, example URL:
 
     https://example.com/cgi/twVideo.html
 
-### Add a Twilio Function
+### <a name="bullet3"></a>Add a Twilio Function
 
 Create a Twilio Function to generate client capability tokens.
 
@@ -75,23 +88,23 @@ Create a Twilio Function to generate client capability tokens.
    - Copy and paste [tokenvideo.js](tokenvideo.js) into the Code box.
 3. Click Save.
 
-### <a name="bullet3"></a>Create API Key and secret key string.
+### <a name="bullet4"></a>Create API Key and secret key string
 
     [https://www.twilio.com/console/voice/runtime/api-keys](https://www.twilio.com/console/voice/runtime/api-keys)
     https://www.twilio.com/console/voice/runtime/api-keys/create
     Friendly name: owlvideo
-    API key SID: SKe0b13kwe94wir04ofoq5d4bd9f8b2c
-    API key Secret: SuwkWen6Q5zNFvAkwlk49wMsXpDKOQ1bo
+    API key SID: SKxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    API key Secret: yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 
 Add the API key SID and Secret into the Generate Access Token Function.
 Note, the  account SID, API key and secret are the authentication keys. They must be from the same account or subaccount (not a combination of each).
 
 This will be used when configuring Twilio Functions environment variables:
 
-    VOICE_API_KEY: SKe0b13kwe94wir04ofoq5d4bd9f8b2c
-    VOICE_API_SECRET: SuwkWen6Q5zNFvAkwlk49wMsXpDKOQ1bo
+    VOICE_API_KEY: SKxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    VOICE_API_SECRET: yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 
-### Twilio Function Configuration
+### <a name="bullet5"></a>Twilio Function Configuration
 
 Configure your account's Twilio Functions settings.
     
@@ -124,7 +137,7 @@ You can view the host name by going to the following link. The host name, is You
     
     If you are running httpVideoServer.js. Restart it.
 
-## Ready to Test
+## <a name="bullet6"></a>Testing
 
 If running locally, use a browser to access the Twilio Client:
 
