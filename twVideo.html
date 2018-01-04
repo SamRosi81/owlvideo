@@ -15,6 +15,7 @@
             var tokenRoomId = roomName;
             var theToken = "";
 
+            // -----------------------------------------------------------------
             var activeRoom;
             var previewTracks;
             // Attach the Tracks to the DOM.
@@ -101,7 +102,8 @@
                 }
             }
 
-            function refresh() {
+            // -----------------------------------------------------------------
+            function getToken() {
                 // Since, programs cannot make an Ajax call to a remote resource,
                 // Need to do an Ajax call to a local program that goes and gets the token.
                 log("Refresh the token.");
@@ -141,13 +143,13 @@
                     roomName = tokenRoomId;
                 }
             }
-            function refreshClientId() {
-                // log("++ Refresh the Client Id (to-caller).");
+            function refreshToken() {
                 setClientId();
                 setRoomId();
-                refresh();
+                getToken();
             }
 
+            // -----------------------------------------------------------------
             // Activity log.
             function log(message) {
                 var logDiv = document.getElementById('log');
@@ -156,8 +158,7 @@
             }
             window.onload = function () {
                 // log("Client id: <b>" + clientId + "</b>");
-                setClientId();
-                refresh();
+                refreshToken();
 
                 // When we are about to transition away from this page, disconnect
                 // from the room, if joined.
@@ -212,7 +213,7 @@
         <div id="remote-media"></div>
         <div id="controls">
             <div id="preview">
-                <p class="instructions">Twilio Video</p>
+                <a href="https://github.com/tigerfarm/owlvideo" style="text-decoration:none;"><p class="instructions">Twilio Video GitHub Project</p></a>
                 <div id="local-media"></div>
                 <button id="button-preview">Preview My Camera</button>
             </div>
@@ -220,7 +221,7 @@
                 <button id="button-join">Join Room</button>
                 <button id="button-leave">Leave Room</button>
                 <p>
-                <button id="button-refresh" onclick="refreshClientId();">Refresh Token</button>
+                    <button id="button-refresh" onclick="refreshToken();">Refresh Token</button>
                 </p>
                 <p>
                     <input type="text" id="clientid" name="clientid" placeholder="Enter client id"/>
