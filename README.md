@@ -96,13 +96,8 @@ Create a Twilio Function to generate client capability tokens.
     API key SID: SKxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     API key Secret: yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 
-Add the API key SID and Secret into the Generate Access Token Function.
+In a following step, the API key SID and Secret are added as Twilio Functions environment variables.
 Note, the  account SID, API key and secret are the authentication keys. They must be from the same account or subaccount (not a combination of each).
-
-This will be used when configuring Twilio Functions environment variables:
-
-    VOICE_API_KEY: SKxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    VOICE_API_SECRET: yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 
 ### <a name="bullet5"></a>Twilio Function Configuration
 
@@ -119,8 +114,8 @@ Create Function Environment Variables.
     CLIENT_ID : Example, owluser (a default Client identity attribute)
     ROOM_ID : Example, owlroom (a default room name attribute)
     
-    VOICE_API_KEY : SKe0b13kwe94wir04ofoq5d4bd9f8b2c (SK value created above)
-    VOICE_API_SECRET : SuwkWen6Q5zNFvAkwlk49wMsXpDKOQ1bo (secret string value created above)
+    VOICE_API_KEY : SKxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (SK value created above)
+    VOICE_API_SECRET : yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy (secret string value created above)
     
     Click Save, to save the environment variables.
 
