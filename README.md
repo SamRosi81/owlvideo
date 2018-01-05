@@ -35,12 +35,6 @@ The server side can run locally on a computer using NodeJS, or run on a website 
 5. [Twilio Function Configuration](#bullet5)
 6. [Testing](#bullet6)
 
-Valid access tokens can now be generated for use to make phone calls.
-
-6. [Test using Owl Call.](#bullet6)
-
-7. [Set up to receive incoming phone calls.](#bullet7)
-
 ### <a name="bullet1"></a>Local Server Side Setup using a NodeJS Webserver
 
 Download the project zip file.
@@ -76,7 +70,13 @@ Download the project zip file. Unzip the file into your website's CGI bin direct
 
 ### <a name="bullet3"></a>Add a Twilio Function
 
+You will need to replace the sample domain name, "about-time-6360.twil.io," with your Runtime Domain name.
+You can view your Runtime Domain name at this link:
+
+[https://www.twilio.com/console/runtime/overview](https://www.twilio.com/console/runtime/overview)
+
 Create a Twilio Function to generate client capability tokens.
+In Twilio Console, go to:
 
     https://www.twilio.com/console/runtime/functions
     
@@ -85,10 +85,12 @@ Create a Twilio Function to generate client capability tokens.
    - Properties, Function Name: Generate Video Access Token
    - URL: https://about-time-6360.twil.io /tokenvideo
    - Uncheck Configuration, Access Control to allow Twilio JS Client access.
-   - Copy and paste [tokenvideo.js](tokenvideo.js) into the Code box.
+   - Copy and paste the contents of [tokenvideo.js](tokenvideo.js) into the Code box.
 3. Click Save.
 
-### <a name="bullet4"></a>Create API Key and secret key string
+### <a name="bullet4"></a>Create an API key and secret key string
+
+In Twilio Console, go to:
 
     [https://www.twilio.com/console/voice/runtime/api-keys](https://www.twilio.com/console/voice/runtime/api-keys)
     https://www.twilio.com/console/voice/runtime/api-keys/create
@@ -102,6 +104,7 @@ Note, the  account SID, API key and secret are the authentication keys. They mus
 ### <a name="bullet5"></a>Twilio Function Configuration
 
 Configure your account's Twilio Functions settings.
+In Twilio Console, go to:
     
     https://www.twilio.com/console/runtime/functions/configure
     
@@ -111,11 +114,11 @@ Check: Enable ACCOUNT_SID and AUTH_TOKEN.
 Create Function Environment Variables.
 
     (Key : value)
-    CLIENT_ID : Example, owluser (a default Client identity attribute)
-    ROOM_ID : Example, owlroom (a default room name attribute)
+    CLIENT_ID : Example, owluser (Your default Client identity attribute, no spaces)
+    ROOM_ID : Example, owlroom (a default room name attribute, no spaces)
     
     VOICE_API_KEY : SKxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (SK value created above)
-    VOICE_API_SECRET : yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy (secret string value created above)
+    VOICE_API_SECRET : yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy (secret key string value created above)
     
     Click Save, to save the environment variables.
 
