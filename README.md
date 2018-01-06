@@ -9,6 +9,8 @@ Or a website that runs PHP programs. PHP is very common with service providers.
 
 Note, this sample is a variation of the [Video Quickstart PHP](https://github.com/kedartoraskar/video-quickstart-php) GitHub project.
 
+<img width="600px"  src="TwilioVideo.jpg"/>
+
 ## Files
 
 The Client files:
