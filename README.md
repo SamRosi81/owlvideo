@@ -28,6 +28,12 @@ This is used when hosting the Twilio Client remotely on a public PHP website.
 Twilio NodeJS Functions
 - [generateVideoToken.js](generateVideoToken.js) : generate and return a video room access token.
 
+Heroku Hosting Service
+- [app.json](app.json) : Heroku deployment file to describe the application.
+- [composer.json](composer.json) : Heroku deployment file which sets the programming language used.
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/tigerfarm/owlvideo)
+
 ## Implementation
 
 The server side can run locally on a computer using NodeJS, or run on a website that runs PHP programs.
