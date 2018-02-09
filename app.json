@@ -1,0 +1,7 @@
+{
+  "name": "Owl Video, using the Twilio Video service.",
+  "description": "A sample Twilio Video web client for making and receiving video sessions.",
+  "repository": "https://github.com/tigerfarm/owlvideo",
+  "logo": "http://tigerfarmpress.com/images/topImgLeft.jpg",
+  "keywords": ["php", "nodejs", "Twilio"]
+}
