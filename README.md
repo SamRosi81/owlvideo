@@ -16,7 +16,7 @@ Screen print:
 ## Files
 
 The Client files:
-- [twVideo.html](twVideo.html) : Twilio JavaScript (JS) Client to join video rooms.
+- [index.html](index.html) : Twilio JavaScript (JS) Client to join video rooms.
 - [video.css](video.css) : the Client HTML object styles
 
 The server files:
@@ -70,13 +70,13 @@ Run the NodeJS HTTP server.
     
 Use a browser to access the Twilio Client:
 
-    http://localhost:8000/twVideo.html
+    http://localhost:8000/index.html
 
 ### <a name="bullet2"></a>Remote Server Side Setup using a PHP Webserver
 
 Download the project zip file. Unzip the file into your website's CGI bin directory, or in any directory that will automatically run clientTokenGet.php as PHP program when called from HTTP. Test by displaying the Client in your browser, example URL:
 
-    https://example.com/cgi/twVideo.html
+    https://example.com/cgi/index.html
 
 ### <a name="bullet3"></a>Add a Twilio Function
 
@@ -149,11 +149,11 @@ You can view the host name by going to the following link. The host name, is You
 
 If running locally, use a browser to access the Twilio Client:
 
-    http://localhost:8000/twVideo.html
+    http://localhost:8000/index.html
 
 If on a website, use a browser to access the website Twilio Client URL, example:
 
-    http://example.com/cgi/twVideo.html
+    http://example.com/cgi/index.html
     
 Click the Refresh button. The Client's room access token is refreshed.
 
