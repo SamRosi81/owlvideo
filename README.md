@@ -132,6 +132,13 @@ Create Function Environment Variables.
     
     Click Save, to save the environment variables.
 
+Test by generating an access token in your browser (Use your own Twilio Function domain):
+
+    https://about-time-1235.twil.io/tokenVideo
+
+Example response (note this is not actual token):
+eyKsbGciOiJIUzI1NiIsInR5cNE8KkpXVCIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTS2YwMjM1OTg2ZjRkNDMzYzMzOGI2NzExNTNiMzQxYTFmLNA8KEk5NTIxODkiLCJncmFudHMiOnsiaWRlbnRpdHkiOiJvd2x1c2VyIiwidmlkZW8iOnsicm9vbSI6Im93bHJvb20ifX0sImlhdCI6MTUxOTk1MjE4OSwiZXhwIjoxNTE5OTU1Nzg5LCJpc3MiOiJTS2YwOnS1OTg2ZjRkNDMzYzMzOGI2NzExNTNiMzQxYTFmIiwic3ViIjoiQUMxYjMyNDE0ZThhYjQxKSJ2ZTYzOTNiY2JiYTdkNWE5ZCJ9.W7jenDR5EZiO0KSENaeF1i5xbLxQTM0qfVRykKkw9
+
 Update your Twilio Function host name into the Twilio Client server side programs.
 You can view the host name by going to the following link. The host name, is Your Runtime Domain name:
 
